@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div>
+  <div>
+    <div class="row">
+      <div class="col">Name</div>
+      <div class="col">Address</div>
+      <div class="col">Mobile</div>
+    </div>  
+
+    <div class="row" *ngFor="let taker of test_takers | paginate: config">
+      <div class="col">{{ taker.name }}</div>
+      <div class="col">{{ taker.address }}</div>
+      <div class="col">{{ taker.mobile }}</div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
